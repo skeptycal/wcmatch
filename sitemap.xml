@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+     <loc>https://facelessuser.github.io/wcmatch/</loc>
+     <lastmod>2018-10-13</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facelessuser.github.io/wcmatch/fnmatch/</loc>
+     <lastmod>2018-10-13</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facelessuser.github.io/wcmatch/glob/</loc>
+     <lastmod>2018-10-13</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facelessuser.github.io/wcmatch/wcmatch/</loc>
+     <lastmod>2018-10-13</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facelessuser.github.io/wcmatch/changelog/</loc>
+     <lastmod>2018-10-13</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facelessuser.github.io/wcmatch/license/</loc>
+     <lastmod>2018-10-13</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+</urlset>
