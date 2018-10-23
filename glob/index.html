@@ -731,7 +731,7 @@
                   <a href="https://github.com/facelessuser/wcmatch/tree/master/docs/src/markdown/glob.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                <h1 id="wcmatchglob">wcmatch.glob<a class="headerlink" href="#wcmatchglob" title="Permanent link"></a></h1>
+                <h1 id="wcmatchglob"><code>wcmatch.glob</code><a class="headerlink" href="#wcmatchglob" title="Permanent link"></a></h1>
 <div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">wcmatch</span> <span class="k">import</span> <span class="n">glob</span>
 </pre></div>
 
@@ -824,8 +824,8 @@
 
 </li>
 <li>
-<p>In general, Wildcard Match's behavior is modeled off of Bash's, so unlike the builtin <code>glob</code>, Wildcard Match's <code>glob</code> will match and return <code>.</code> and <code>..</code> in certain cases just like Bash does.</p>
-<p>Buitin:</p>
+<p>In general, Wildcard Match's behavior is modeled off of Bash's, so unlike the Python's default <code>glob</code>, Wildcard Match's <code>glob</code> will match and return <code>.</code> and <code>..</code> in certain cases just like Bash does.</p>
+<p>Python's default:</p>
 <div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">glob</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">glob</span><span class="o">.</span><span class="n">glob</span><span class="p">(</span><span class="s1">&#39;docs/.*&#39;</span><span class="p">)</span>
 <span class="go">[]</span>
@@ -850,7 +850,7 @@
 <thead>
 <tr>
 <th>[:posix:]</th>
-<th>\p{Posix}</th>
+<th>\p{posix}</th>
 <th>ASCII</th>
 <th>Unicode</th>
 </tr>
@@ -937,11 +937,11 @@
 </tbody>
 </table>
 <h2 id="api">API<a class="headerlink" href="#api" title="Permanent link"></a></h2>
-<h4 id="globglob">glob.glob<a class="headerlink" href="#globglob" title="Permanent link"></a></h4>
+<h4 id="globglob"><code>glob.glob</code><a class="headerlink" href="#globglob" title="Permanent link"></a></h4>
 <div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">glob</span><span class="p">(</span><span class="n">patterns</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">flags</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
 </pre></div>
 
-<p><code>glob</code> takes a pattern (or list of patterns) and will crawl the file system returning matching files. If a file/folder matches any postive patterns, it is considered a match.  If it matches <em>any</em> inverse pattern (when enabling the <a href="#globnegate"><code>NEGATE</code></a> flag), then it will be not be returned.</p>
+<p><code>glob</code> takes a pattern (or list of patterns) and will crawl the file system returning matching files. If a file/folder matches any positive patterns, it is considered a match.  If it matches <em>any</em> inverse pattern (when enabling the <a href="#globnegate"><code>NEGATE</code></a> flag), then it will be not be returned.</p>
 <div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">wcmatch</span> <span class="k">import</span> <span class="n">glob</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">glob</span><span class="o">.</span><span class="n">glob</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;**/*.md&#39;</span><span class="p">)</span>
 <span class="go">[&#39;docs/src/markdown/_snippets/abbr.md&#39;, &#39;docs/src/markdown/_snippets/links.md&#39;, &#39;docs/src/markdown/_snippets/refs.md&#39;, &#39;docs/src/markdown/changelog.md&#39;, &#39;docs/src/markdown/fnmatch.md&#39;, &#39;docs/src/markdown/glob.md&#39;, &#39;docs/src/markdown/index.md&#39;, &#39;docs/src/markdown/installation.md&#39;, &#39;docs/src/markdown/license.md&#39;, &#39;README.md&#39;]</span>
@@ -959,7 +959,7 @@
 <span class="go">[&#39;__pycache__/&#39;, &#39;docs/&#39;, &#39;docs/src/&#39;, &#39;docs/src/markdown/&#39;, &#39;docs/src/markdown/_snippets/&#39;, &#39;docs/theme/&#39;, &#39;requirements/&#39;, &#39;stuff/&#39;, &#39;tests/&#39;, &#39;tests/__pycache__/&#39;, &#39;wcmatch/&#39;, &#39;wcmatch/__pycache__/&#39;]</span>
 </pre></div>
 
-<h4 id="globiglob">glob.iglob<a class="headerlink" href="#globiglob" title="Permanent link"></a></h4>
+<h4 id="globiglob"><code>glob.iglob</code><a class="headerlink" href="#globiglob" title="Permanent link"></a></h4>
 <div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">iglob</span><span class="p">(</span><span class="n">patterns</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">flags</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
 </pre></div>
 
@@ -969,7 +969,7 @@
 <span class="go">[&#39;docs/src/markdown/_snippets/abbr.md&#39;, &#39;docs/src/markdown/_snippets/links.md&#39;, &#39;docs/src/markdown/_snippets/refs.md&#39;, &#39;docs/src/markdown/changelog.md&#39;, &#39;docs/src/markdown/fnmatch.md&#39;, &#39;docs/src/markdown/glob.md&#39;, &#39;docs/src/markdown/index.md&#39;, &#39;docs/src/markdown/installation.md&#39;, &#39;docs/src/markdown/license.md&#39;, &#39;README.md&#39;]</span>
 </pre></div>
 
-<h4 id="globglobmatch">glob.globmatch<a class="headerlink" href="#globglobmatch" title="Permanent link"></a></h4>
+<h4 id="globglobmatch"><code>glob.globmatch</code><a class="headerlink" href="#globglobmatch" title="Permanent link"></a></h4>
 <div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">globmatch</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">patterns</span><span class="p">,</span> \<span class="o">*</span><span class="p">,</span> <span class="n">flags</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
 </pre></div>
 
@@ -1001,7 +1001,7 @@
 <span class="go">False</span>
 </pre></div>
 
-<h4 id="globglobfilter">glob.globfilter<a class="headerlink" href="#globglobfilter" title="Permanent link"></a></h4>
+<h4 id="globglobfilter"><code>glob.globfilter</code><a class="headerlink" href="#globglobfilter" title="Permanent link"></a></h4>
 <div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">globfilter</span><span class="p">(</span><span class="n">filenames</span><span class="p">,</span> <span class="n">patterns</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">flags</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
 </pre></div>
 
@@ -1011,7 +1011,7 @@
 <span class="go">[&#39;some/path/a.txt&#39;, &#39;b.txt&#39;]</span>
 </pre></div>
 
-<h4 id="globglobsplit">glob.globsplit<a class="headerlink" href="#globglobsplit" title="Permanent link"></a></h4>
+<h4 id="globglobsplit"><code>glob.globsplit</code><a class="headerlink" href="#globglobsplit" title="Permanent link"></a></h4>
 <div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">globsplit</span><span class="p">(</span><span class="n">pattern</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">flags</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
 </pre></div>
 
@@ -1021,7 +1021,7 @@
 <span class="go">(&#39;**/*.txt&#39;, &#39;source/*(some|file).py&#39;)</span>
 </pre></div>
 
-<h4 id="globtranslate">glob.translate<a class="headerlink" href="#globtranslate" title="Permanent link"></a></h4>
+<h4 id="globtranslate"><code>glob.translate</code><a class="headerlink" href="#globtranslate" title="Permanent link"></a></h4>
 <div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">translate</span><span class="p">(</span><span class="n">patterns</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">flags</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
 </pre></div>
 
@@ -1033,7 +1033,7 @@
 <span class="go">([], [&#39;^(?!(?s:(?:(?!(?:\\/|^)\\.).)*?(?:^|$|\\/)+(?=.)(?!(?:\\.{1,2})(?:$|\\/))(?:(?!\\.)[^\\/]*?)?\\.py[\\/]*?)).*?$&#39;, &#39;^(?!(?s:(?:(?!(?:\\/|^)\\.).)*?(?:^|$|\\/)+(?=.)(?!(?:\\.{1,2})(?:$|\\/))(?:(?!\\.)[^\\/]*?)?\\.txt[\\/]*?)).*?$&#39;])</span>
 </pre></div>
 
-<h4 id="globescape">glob.escape<a class="headerlink" href="#globescape" title="Permanent link"></a></h4>
+<h4 id="globescape"><code>glob.escape</code><a class="headerlink" href="#globescape" title="Permanent link"></a></h4>
 <div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">escape</span><span class="p">(</span><span class="n">pattern</span><span class="p">,</span> <span class="n">unix</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
 </pre></div>
 
@@ -1047,7 +1047,7 @@
 
 <p>On a Windows system, drives are not escaped since meta characters are not parsed in drives. Drives on Windows are generally treated special. This is because a drive could contain special characters like in <code>\\?\c:\</code>.</p>
 <p><code>escape</code> will detect the system it is running on and pick Windows escape logic or Linux/Unix logic. Since <a href="#globglobmatch"><code>globmatch</code></a> allows you to match Unix style paths on a Windows system, you can force Unix style escaping via the <code>unix</code> parameter.</p>
-<h4 id="globraw_escape">glob.raw_escape<a class="headerlink" href="#globraw_escape" title="Permanent link"></a></h4>
+<h4 id="globraw_escape"><code>glob.raw_escape</code><a class="headerlink" href="#globraw_escape" title="Permanent link"></a></h4>
 <div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">raw_escape</span><span class="p">(</span><span class="n">pattern</span><span class="p">,</span> <span class="n">unix</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
 </pre></div>
 
@@ -1061,25 +1061,25 @@
 
 <p><code>raw_escape</code> will detect the system it is running on and pick Windows escape logic or Linux/Unix logic. Since <a href="#globglobmatch"><code>globmatch</code></a> allows you to match Unix style paths on a Windows system, you can force Unix style escaping via the <code>unix</code> parameter.</p>
 <h2 id="flags">Flags<a class="headerlink" href="#flags" title="Permanent link"></a></h2>
-<h4 id="globforcecase">glob.FORCECASE, glob.F<a class="headerlink" href="#globforcecase" title="Permanent link"></a></h4>
+<h4 id="globforcecase"><code>glob.FORCECASE, glob.F</code><a class="headerlink" href="#globforcecase" title="Permanent link"></a></h4>
 <p><code>FORCECASE</code> forces case sensitivity. On Windows, this will force paths to be treated like Linux/Unix paths, and slashes will not be normalized. Path normalization only relates to <a href="#globglobmatch"><code>globmatch</code></a> and not for <a href="#globglob"><code>glob</code></a> and <a href="#globiglob"><code>iglob</code></a>. Paths must be normalized for <code>glob</code> and <code>iglob</code> in order to scan the file system. <code>FORCECASE</code> has higher priority than <a href="#globignorecase"><code>IGNORECASE</code></a>.</p>
-<h4 id="globignorecase">glob.IGNORECASE, glob.I<a class="headerlink" href="#globignorecase" title="Permanent link"></a></h4>
+<h4 id="globignorecase"><code>glob.IGNORECASE, glob.I</code><a class="headerlink" href="#globignorecase" title="Permanent link"></a></h4>
 <p><code>IGNORECASE</code> forces case insensitivity. <a href="#globforcecase"><code>FORCECASE</code></a> has higher priority than <code>IGNORECASE</code>.</p>
-<h4 id="globrawchars">glob.RAWCHARS, glob.R<a class="headerlink" href="#globrawchars" title="Permanent link"></a></h4>
+<h4 id="globrawchars"><code>glob.RAWCHARS, glob.R</code><a class="headerlink" href="#globrawchars" title="Permanent link"></a></h4>
 <p><code>RAWCHARS</code> causes string character syntax to be parsed in raw strings: <code class="highlight"><span class="sa">r</span><span class="s1">&#39;\u0040&#39;</span></code> &rarr; <code class="highlight"><span class="sa">r</span><span class="s1">&#39;@&#39;</span></code>. This will handle standard string escapes and Unicode including <code class="highlight"><span class="sa">r</span><span class="s1">&#39;\N{CHAR NAME}&#39;</span></code>.</p>
-<h4 id="globnegate">glob.NEGATE, glob.N<a class="headerlink" href="#globnegate" title="Permanent link"></a></h4>
+<h4 id="globnegate"><code>glob.NEGATE, glob.N</code><a class="headerlink" href="#globnegate" title="Permanent link"></a></h4>
 <p><code>NEGATE</code> causes patterns that start with <code>!</code> to be treated as inverse matches. A pattern of <code>!*.py</code> would match any file but Python files. If used with the extended glob feature, patterns like <code>!(inverse|pattern)</code> will be mistakenly parsed as an inverse pattern instead of as an inverse extended glob group.  See <a href="#globminusgate"><code>MINUSNEGATE</code></a> for an alternative syntax that plays nice with extended glob.</p>
-<h4 id="globminusnegate">glob.MINUSNEGATE, glob.M<a class="headerlink" href="#globminusnegate" title="Permanent link"></a></h4>
+<h4 id="globminusnegate"><code>glob.MINUSNEGATE, glob.M</code><a class="headerlink" href="#globminusnegate" title="Permanent link"></a></h4>
 <p>When <code>MINUSNEGATE</code> is used with <a href="#globnegate"><code>NEGATE</code></a>, negate patterns are recognized by a pattern starting with <code>-</code> instead of <code>!</code>. This plays nice with the extended glob feature which already uses <code>!</code> in patterns such as <code>!(...)</code>.</p>
-<h4 id="globglobstar">glob.GLOBSTAR, glob.G<a class="headerlink" href="#globglobstar" title="Permanent link"></a></h4>
+<h4 id="globglobstar"><code>glob.GLOBSTAR, glob.G</code><a class="headerlink" href="#globglobstar" title="Permanent link"></a></h4>
 <p><code>GLOBSTAR</code> enables the feature where <code>**</code> matches zero or more directories.</p>
-<h4 id="globdotglob">glob.DOTGLOB, glob.D<a class="headerlink" href="#globdotglob" title="Permanent link"></a></h4>
+<h4 id="globdotglob"><code>glob.DOTGLOB, glob.D</code><a class="headerlink" href="#globdotglob" title="Permanent link"></a></h4>
 <p>By default, <a href="#globglob"><code>glob</code></a> and <a href="#globglobmatch"><code>globmatch</code></a> will not match file or directory names that start with dot <code>.</code> unless matched with a literal dot. <code>DOTGLOB</code> allows the meta characters (such as <code>*</code>) to glob dots like any other character. Dots will not be matched in <code>[]</code>, <code>*</code>, <code>?</code>, or extended patterns like <code>+(...)</code>.</p>
 <p>Alternatively <code>DOTMATCH</code> will also be accepted for consistency with the other provided libraries. Both flags are exactly the same and are provided as a convenience in case the user finds one more intuitive than the other since <code>DOTGLOB</code> is often the name used in Bash.</p>
-<h4 id="globextglob">glob.EXTGLOB, glob.E<a class="headerlink" href="#globextglob" title="Permanent link"></a></h4>
+<h4 id="globextglob"><code>glob.EXTGLOB, glob.E</code><a class="headerlink" href="#globextglob" title="Permanent link"></a></h4>
 <p><code>EXTGLOB</code> enables extended pattern matching which includes special pattern lists such as <code>+(...)</code>, <code>*(...)</code>, <code>?(...)</code>, etc. See the <a href="#syntax">syntax overview</a> for more information.</p>
 <p>Alternatively <code>EXTMATCH</code> will also be accepted for consistency with the other provided libraries. Both flags are exactly the same and are provided as a convenience in case the user finds one more intuitive than the other since <code>EXTGLOB</code> is often the name used in Bash.</p>
-<h4 id="globbrace">glob.BRACE, glob.B<a class="headerlink" href="#globbrace" title="Permanent link"></a></h4>
+<h4 id="globbrace"><code>glob.BRACE, glob.B</code><a class="headerlink" href="#globbrace" title="Permanent link"></a></h4>
 <p><code>BRACE</code> enables Bash style brace expansion: <code>a{b,{c,d}}</code> &rarr; <code>ab ac ad</code>. Brace expansion is applied before anything else. When applied, a pattern will be expanded into multiple patterns. Each pattern will then be parsed separately.</p>
 <p>For simple patterns, it may make more sense to use <a href="#globextglob"><code>EXTGLOB</code></a> which will only generate a single pattern: <code>@(ab|ac|ad)</code>.</p>
 <p>Be careful with patterns such as <code>{1..100}</code> which would generate one hundred patterns that will all get individually parsed. Sometimes you really need such a pattern, but be mindful that it will be slower as you generate larger sets of patterns.</p>

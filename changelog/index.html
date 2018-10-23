@@ -521,16 +521,18 @@
 <li><strong>FIX</strong>: <code>wcmatch</code> override events (<code>on_error</code> and <code>on_skip</code>) should verify the return  is <strong>not None</strong> and not <strong>not falsy</strong>.</li>
 </ul>
 <h2 id="201">2.0.1<a class="headerlink" href="#201" title="Permanent link"></a></h2>
-<p>-<strong>FIX</strong>: Can't install due to requirements being assigned to setup opposed to install.</p>
+<ul>
+<li><strong>FIX</strong>: Can't install due to requirements being assigned to setup opposed to install.</li>
+</ul>
 <h2 id="200">2.0.0<a class="headerlink" href="#200" title="Permanent link"></a></h2>
 <div class="admonition danger">
 <p class="admonition-title">Breaking Changes</p>
 <p>Version 2.0.0 introduces breaking changes in regards to flags.  This is meant to bring about consistency amongst the provided libraries. Flag names have been changed in some cases, and logic has been inverted in some cases.</p>
 </div>
 <ul>
-<li><strong>NEW</strong>: Glob's <code>NOBRACE</code>, <code>NOGLOBSTAR</code>, and <code>NOEXTGLOB</code> flags are now <code>BRACE</code>, <code>GLOBSTAR</code>, and <code>EXTGLOB</code> and now enable the features instead of disabling the features. This logic matches the provided fnmatch and wcmatch.</li>
+<li><strong>NEW</strong>: Glob's <code>NOBRACE</code>, <code>NOGLOBSTAR</code>, and <code>NOEXTGLOB</code> flags are now <code>BRACE</code>, <code>GLOBSTAR</code>, and <code>EXTGLOB</code> and now enable the features instead of disabling the features. This logic matches the provided <code>fnmatch</code> and <code>wcmatch</code>.</li>
 <li><strong>NEW</strong>: Glob's <code>DOTGLOB</code> and <code>EXTGLOB</code> also have the respective aliases <code>DOTMATCH</code> and <code>EXTMATCH</code> to provide consistent flags across provided libraries, but the <code>GLOB</code> variants that match Bash's feature names can still be used.</li>
-<li><strong>NEW</strong>: Fnmatch's <code>PERIOD</code> flag has been replaced with <code>DOTMATCH</code> with inverted logic from what was originally provided.</li>
+<li><strong>NEW</strong>: <code>fnmatch</code>'s <code>PERIOD</code> flag has been replaced with <code>DOTMATCH</code> with inverted logic from what was originally provided.</li>
 <li><strong>NEW</strong>: Documentation exposes the shorthand form of flags: <code>FORCECASE</code> &rarr; <code>F</code>, etc.</li>
 <li><strong>FIX</strong>: Wcmatch always documented that it had the flag named <code>EXTMATCH</code>, but internally it was actually <code>EXTGLOB</code>, this was a bug though. <code>EXTMATCH</code> is now the documented and the actual flag to use.</li>
 </ul>

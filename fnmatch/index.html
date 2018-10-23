@@ -352,8 +352,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#fnmatchsplit" title="fnmatch.split" class="md-nav__link">
-    fnmatch.split
+  <a href="#fnmatchfnsplit" title="fnmatch.fnsplit" class="md-nav__link">
+    fnmatch.fnsplit
   </a>
   
 </li>
@@ -555,8 +555,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#fnmatchsplit" title="fnmatch.split" class="md-nav__link">
-    fnmatch.split
+  <a href="#fnmatchfnsplit" title="fnmatch.fnsplit" class="md-nav__link">
+    fnmatch.fnsplit
   </a>
   
 </li>
@@ -661,12 +661,12 @@
                   <a href="https://github.com/facelessuser/wcmatch/tree/master/docs/src/markdown/fnmatch.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                <h1 id="wcmatchfnmatch">wcmatch.fnmatch<a class="headerlink" href="#wcmatchfnmatch" title="Permanent link"></a></h1>
+                <h1 id="wcmatchfnmatch"><code>wcmatch.fnmatch</code><a class="headerlink" href="#wcmatchfnmatch" title="Permanent link"></a></h1>
 <div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">wcmatch</span> <span class="k">import</span> <span class="n">fnmatch</span>
 </pre></div>
 
 <h2 id="syntax">Syntax<a class="headerlink" href="#syntax" title="Permanent link"></a></h2>
-<p>The <code>fnmatch</code> library is similar to the builtin <code>fnmatch</code>, but with some enhancements and some differences. It is mainly used for matching file names with glob patterns. For pathnames, Wildcard Match's <a href="glob#globglobmatch"><code>globmatch</code></a> is a more appropriate choice. Not all of the features listed below are enabled by default. See <a href="#flags">flags</a> for more information.</p>
+<p>The <code>fnmatch</code> library is similar to the builtin <code>fnmatch</code>, but with some enhancements and some differences. It is mainly used for matching file names with glob patterns. For path names, Wildcard Match's <a href="glob#globglobmatch"><code>globmatch</code></a> is a more appropriate choice. Not all of the features listed below are enabled by default. See <a href="#flags">flags</a> for more information.</p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p>When using backslashes, it is helpful to use raw strings. In a raw string, a single backslash is used to escape a character <code class="highlight"><span class="sa">r</span><span class="s1">&#39;\?&#39;</span></code>.  If you want to represent a literal backslash, you must use two: <code class="highlight"><span class="sa">r</span><span class="s1">&#39;some</span><span class="se">\\</span><span class="s1">path&#39;</span></code>.</p>
@@ -744,7 +744,7 @@
 <thead>
 <tr>
 <th>[:posix:]</th>
-<th>\p{Posix}</th>
+<th>\p{posix}</th>
 <th>ASCII</th>
 <th>Unicode</th>
 </tr>
@@ -831,7 +831,7 @@
 </tbody>
 </table>
 <h2 id="api">API<a class="headerlink" href="#api" title="Permanent link"></a></h2>
-<h4 id="fnmatchfnmatch">fnmatch.fnmatch<a class="headerlink" href="#fnmatchfnmatch" title="Permanent link"></a></h4>
+<h4 id="fnmatchfnmatch"><code>fnmatch.fnmatch</code><a class="headerlink" href="#fnmatchfnmatch" title="Permanent link"></a></h4>
 <div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">fnmatch</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">patterns</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">flags</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
 </pre></div>
 
@@ -863,7 +863,7 @@
 <span class="go">False</span>
 </pre></div>
 
-<h4 id="fnmatchfilter">fnmatch.filter<a class="headerlink" href="#fnmatchfilter" title="Permanent link"></a></h4>
+<h4 id="fnmatchfilter"><code>fnmatch.filter</code><a class="headerlink" href="#fnmatchfilter" title="Permanent link"></a></h4>
 <div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">filter</span><span class="p">(</span><span class="n">filenames</span><span class="p">,</span> <span class="n">patterns</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">flags</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
 </pre></div>
 
@@ -873,7 +873,7 @@
 <span class="go">[&#39;a.txt&#39;, &#39;b.txt&#39;]</span>
 </pre></div>
 
-<h4 id="fnmatchsplit">fnmatch.split<a class="headerlink" href="#fnmatchsplit" title="Permanent link"></a></h4>
+<h4 id="fnmatchfnsplit"><code>fnmatch.fnsplit</code><a class="headerlink" href="#fnmatchfnsplit" title="Permanent link"></a></h4>
 <div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">fnsplit</span><span class="p">(</span><span class="n">pattern</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">flags</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
 </pre></div>
 
@@ -883,7 +883,7 @@
 <span class="go">(&#39;*.txt&#39;, &#39;*(some|file).py&#39;)</span>
 </pre></div>
 
-<h4 id="fnmatchtranslate">fnmatch.translate<a class="headerlink" href="#fnmatchtranslate" title="Permanent link"></a></h4>
+<h4 id="fnmatchtranslate"><code>fnmatch.translate</code><a class="headerlink" href="#fnmatchtranslate" title="Permanent link"></a></h4>
 <div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">translate</span><span class="p">(</span><span class="n">patterns</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">flags</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
 </pre></div>
 
@@ -896,21 +896,21 @@
 </pre></div>
 
 <h2 id="flags">Flags<a class="headerlink" href="#flags" title="Permanent link"></a></h2>
-<h4 id="fnmatchforcecase">fnmatch.FORCECASE, fnmatch.F<a class="headerlink" href="#fnmatchforcecase" title="Permanent link"></a></h4>
+<h4 id="fnmatchforcecase"><code>fnmatch.FORCECASE, fnmatch.F</code><a class="headerlink" href="#fnmatchforcecase" title="Permanent link"></a></h4>
 <p><code>FORCECASE</code> forces case sensitivity. On Windows, this will force paths to be treated like Linux/Unix paths, and slashes will not be normalized. <code>FORCECASE</code> has higher priority than <a href="#fnmatchignorecase"><code>IGNORECASE</code></a>.</p>
-<h4 id="fnmatchignorecase">fnmatch.IGNORECASE, fnmatch.I<a class="headerlink" href="#fnmatchignorecase" title="Permanent link"></a></h4>
+<h4 id="fnmatchignorecase"><code>fnmatch.IGNORECASE, fnmatch.I</code><a class="headerlink" href="#fnmatchignorecase" title="Permanent link"></a></h4>
 <p><code>IGNORECASE</code> forces case insensitivity. <a href="#fnmatchforecase"><code>FORCECASE</code></a> has higher priority than <code>IGNORECASE</code>.</p>
-<h4 id="fnmatchrawchars">fnmatch.RAWCHARS, fnmatch.R<a class="headerlink" href="#fnmatchrawchars" title="Permanent link"></a></h4>
+<h4 id="fnmatchrawchars"><code>fnmatch.RAWCHARS, fnmatch.R</code><a class="headerlink" href="#fnmatchrawchars" title="Permanent link"></a></h4>
 <p><code>RAWCHARS</code> causes string character syntax to be parsed in raw strings: <code class="highlight"><span class="sa">r</span><span class="s1">&#39;\u0040&#39;</span></code> &rarr; <code class="highlight"><span class="sa">r</span><span class="s1">&#39;@&#39;</span></code>. This will handle standard string escapes and Unicode including <code class="highlight"><span class="sa">r</span><span class="s1">&#39;\N{CHAR NAME}&#39;</span></code>.</p>
-<h4 id="fnmatchnegate">fnmatch.NEGATE, fnmatch.N<a class="headerlink" href="#fnmatchnegate" title="Permanent link"></a></h4>
-<p><code>NEGATE</code> causes patterns that start with <code>!</code> to be treated as inverse matches. A pattern of <code>!*.py</code> would match any file but Python files. If used with <a href="#fnmatchextmatch"><code>EXTMATCH</code></a>, patterns like <code>!(inverse|pattern)</code> will be mistakenly parsed as an inverse pattern instead of an inverse extmatch group.  See <a href="#fnmatchminusnegate"><code>MINUSNEGATE</code></a> for an alternative syntax that plays nice with <code>EXTMATCH</code>.</p>
-<h4 id="fnmatchminusnegate">fnmatch.MINUSNEGATE, fnmatch.M<a class="headerlink" href="#fnmatchminusnegate" title="Permanent link"></a></h4>
+<h4 id="fnmatchnegate"><code>fnmatch.NEGATE, fnmatch.N</code><a class="headerlink" href="#fnmatchnegate" title="Permanent link"></a></h4>
+<p><code>NEGATE</code> causes patterns that start with <code>!</code> to be treated as inverse matches. A pattern of <code>!*.py</code> would match any file but Python files. If used with <a href="#fnmatchextmatch"><code>EXTMATCH</code></a>, patterns like <code>!(inverse|pattern)</code> will be mistakenly parsed as an inverse pattern instead of an inverse <code>extmatch</code> group.  See <a href="#fnmatchminusnegate"><code>MINUSNEGATE</code></a> for an alternative syntax that plays nice with <code>EXTMATCH</code>.</p>
+<h4 id="fnmatchminusnegate"><code>fnmatch.MINUSNEGATE, fnmatch.M</code><a class="headerlink" href="#fnmatchminusnegate" title="Permanent link"></a></h4>
 <p>When <code>MINUSNEGATE</code> is used with <a href="#fnmatchnegate"><code>NEGATE</code></a>, negate patterns are recognized by a pattern starting with <code>-</code> instead of <code>!</code>. This plays nice with the <a href="#fnmatchextmatch"><code>EXTMATCH</code></a> option.</p>
-<h4 id="fnmatchdotmatch">fnmatch.DOTMATCH, fnmatch.D<a class="headerlink" href="#fnmatchdotmatch" title="Permanent link"></a></h4>
+<h4 id="fnmatchdotmatch"><code>fnmatch.DOTMATCH, fnmatch.D</code><a class="headerlink" href="#fnmatchdotmatch" title="Permanent link"></a></h4>
 <p>By default, <a href="#fnmatchfnmatch"><code>glob</code></a> and related functions will not match file or directory names that start with dot <code>.</code> unless matched with a literal dot. <code>DOTMATCH</code> allows the meta characters (such as <code>*</code>) to match dots like any other character. Dots will not be matched in <code>[]</code>, <code>*</code>, <code>?</code>, or extended patterns like <code>+(...)</code>.</p>
-<h4 id="fnmatchextmatch">fnmatch.EXTMATCH, fnmatch.E<a class="headerlink" href="#fnmatchextmatch" title="Permanent link"></a></h4>
+<h4 id="fnmatchextmatch"><code>fnmatch.EXTMATCH, fnmatch.E</code><a class="headerlink" href="#fnmatchextmatch" title="Permanent link"></a></h4>
 <p><code>EXTMATCH</code> enables extended pattern matching. This includes special pattern lists such as <code>+(...)</code>, <code>*(...)</code>, <code>?(...)</code>, etc. See the <a href="#syntax">syntax overview</a> for more information.</p>
-<h4 id="fnmatchbrace">fnmatch.BRACE, fnmatch.B<a class="headerlink" href="#fnmatchbrace" title="Permanent link"></a></h4>
+<h4 id="fnmatchbrace"><code>fnmatch.BRACE, fnmatch.B</code><a class="headerlink" href="#fnmatchbrace" title="Permanent link"></a></h4>
 <p><code>BRACE</code> enables Bash style brace expansion: <code>a{b,{c,d}}</code> &rarr; <code>ab ac ad</code>. Brace expansion is applied before anything else. When applied, a pattern will be expanded into multiple patterns. Each pattern will then be parsed separately.</p>
 <p>For simple patterns, it may make more sense to use <a href="#fnmatchextmatch"><code>EXTMATCH</code></a> which will only generate a single pattern: <code>@(ab|ac|ad)</code>.</p>
 <p>Be careful with patterns such as <code>{1..100}</code> which would generate one hundred patterns that will all get individually parsed. Sometimes you really need such a pattern, but be mindful that it will be slower as you generate larger sets of patterns.</p>
